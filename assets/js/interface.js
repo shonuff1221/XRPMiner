@@ -642,10 +642,10 @@ function userBalance(callback){
 
 function buyEggs(ref, trx, callback){
 	if(+trx > +usrBal) {
-		alert("You don't have " + trx + " ADA in your wallet");
+		alert("You don't have " + trx + " XRP in your wallet");
 	}
 	else if(+trx > +spend) {
-		alert("Approve spending " + "ADA" + " first");
+		alert("Approve spending " + "XRP" + " first");
 	} else {
 			minersContract.methods.buyEggs(ref, web3.utils.toWei(trx)).send({ from:currentAddr }).then(result => {
         callback();
